@@ -7,7 +7,7 @@ def input_students
   # While the name is not empty repeat the code
   while !name.empty? do
     # Add the student hash to the array
-    students << {name: name, cohort: :november}
+    students << {name: name.split.map(&:capitalize).join(' '), cohort: :november}
 
     # Exercise 9 - Remove plural for single student
     if students.count == 1
