@@ -8,7 +8,14 @@ def input_students
   while !name.empty? do
     # Add the student hash to the array
     students << {name: name, cohort: :november}
-    puts "We now have #{students.count} students"
+
+    # Exercise 9 - Remove plural for single student
+    if students.count == 1
+      puts "We now have #{students.count} student"
+    elsif
+      puts "We now have #{students.count} students"
+    end
+  
     # Get another name from the user
     name = gets.chomp
   end
@@ -30,7 +37,12 @@ def print(students)
 end
 
 def print_footer(students)
-  puts "Overall we have #{students.count} great students"
+# Exercise 9 - Remove plural for single student
+  if students.count == 1
+    puts "Overall we have #{students.count} great student"
+  elsif
+    puts "Overall we have #{students.count} great students"
+  end
 end
 
 # Calling the methods creates the result
