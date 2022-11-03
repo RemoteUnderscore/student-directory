@@ -3,7 +3,6 @@ def input_students
   puts "To finish, just hit return twice"
   # Create an empty array
   students = []
-  # Get the first name
   name = gets.chomp
   # While the name is not empty repeat the code
   while !name.empty? do
@@ -23,9 +22,10 @@ def print_header
   puts "-------------"
 end
 
+# Exercise 1 - Add numbers to the output
 def print(students)
-  students.each do |student|
-    puts "#{student[:name]} (#{student[:cohort]} cohort)"
+  students.each_with_index do |student, index|
+    puts "#{index + 1}. #{student[:name]} (#{student[:cohort]} cohort)"
   end
 end
 
